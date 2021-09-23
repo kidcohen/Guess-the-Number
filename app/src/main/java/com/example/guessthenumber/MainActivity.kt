@@ -45,12 +45,15 @@ class MainActivity : AppCompatActivity() {
                     if (random > userInput) {
                         textView
                             .text = "random number is GREATER"
+                        Toast.makeText(this, "You're guessing too LOW?!", Toast.LENGTH_SHORT).show()
                     } else if (random < userInput) {
                         textView
                             .text = "random number is LOWER"
+                        Toast.makeText(this, "Get me HIGH", Toast.LENGTH_SHORT).show()
                     } else {
                         textView
                             .text = "CONGRATULATIONS you can guess again, YAY!!!"
+                        Toast.makeText(this, "Finally... So ANNOYING!!!", Toast.LENGTH_SHORT).show()
                         random = (0..50).random()
                         button.text = "Try one more time... PLEASE!!!"
                         numberGuess.text.clear()
